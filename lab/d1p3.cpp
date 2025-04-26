@@ -2,19 +2,20 @@
 #include <string>
 using namespace std;
 
-struct Student
+class Student
 {
+private:
     string student_name;
     int roll_no;
 
-    // Function to accept student info
+public:
     void accept() 
     {
         cout << "Enter student name: ";
         getline(cin, student_name);
         cout << "Enter roll number: ";
         cin >> roll_no;
-        cin.ignore(); // to clear newline character from buffer
+        cin.ignore();
     }
 
     // Function to display student info
@@ -27,7 +28,6 @@ struct Student
 
 int main() 
 {
-    // add loop for multiple students
     Student s;
     s.accept();
     s.display();
